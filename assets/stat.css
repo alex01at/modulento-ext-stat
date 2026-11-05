@@ -1,0 +1,97 @@
+/* admin_dashboard.twig / account_dashboard.twig - chart-local tokens, same
+   light/dark pattern as theme.css. The three categorical hex pairs are
+   slots 1 (blue), 2 (orange) and 3 (aqua) of the dataviz skill's validated
+   default palette - the three slots that clear every CVD/contrast check
+   together ("all-pairs"), not just adjacent-pair. */
+.stat-viz {
+    color-scheme: light;
+    --stat-series-1: #2a78d6;
+    --stat-series-2: #eb6834;
+    --stat-series-3: #1baf7a;
+    --stat-grid: var(--line, #d5dae1);
+    --stat-text: var(--muted, #55606e);
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .stat-viz {
+        color-scheme: dark;
+        --stat-series-1: #3987e5;
+        --stat-series-2: #d95926;
+        --stat-series-3: #199e70;
+    }
+}
+:root[data-theme="dark"] .stat-viz {
+    color-scheme: dark;
+    --stat-series-1: #3987e5;
+    --stat-series-2: #d95926;
+    --stat-series-3: #199e70;
+}
+
+.stat-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem; margin: 0 0 1.5rem; }
+.stat-tile { padding: 1rem 1.2rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--surface); }
+.stat-tile .label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: .25rem; }
+.stat-tile .value { display: block; font-size: 1.9rem; font-weight: 600; }
+.stat-tile small { color: var(--muted); }
+
+.stat-range { display: flex; gap: .5rem; margin: 0 0 1.25rem; }
+.stat-range a { padding: .35rem .8rem; border: 1px solid var(--line); border-radius: 2rem; text-decoration: none; color: inherit; }
+.stat-range a[aria-current] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+
+.stat-section { margin: 0 0 2rem; }
+.stat-section h2 { font-size: 1.05rem; margin: 0 0 .75rem; }
+
+.stat-legend { display: flex; gap: 1rem; margin: 0 0 .75rem; font-size: .85rem; color: var(--muted); list-style: none; padding: 0; }
+.stat-legend li { display: flex; align-items: center; gap: .4rem; }
+.stat-legend .swatch { width: .7rem; height: .7rem; border-radius: 50%; display: inline-block; }
+
+.stat-figure { display: grid; gap: .4rem; }
+.stat-figure-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .75rem; font-size: .9rem; }
+.stat-figure-row .track { grid-column: 1 / -1; height: 10px; background: var(--surface); border-radius: 4px; overflow: hidden; }
+.stat-figure-row .track span { display: block; height: 100%; width: 0; background: var(--stat-series-1); border-radius: 4px; }
+.stat-figure-row .name { grid-column: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.stat-figure-row .count { grid-column: 2; font-variant-numeric: tabular-nums; color: var(--muted); }
+
+.stat-devices { display: flex; height: 28px; border-radius: 4px; overflow: hidden; }
+.stat-devices span { display: flex; align-items: center; justify-content: center; font-size: .8rem; color: #fff; }
+.stat-devices span:nth-child(1) { background: var(--stat-series-1); }
+.stat-devices span:nth-child(2) { background: var(--stat-series-2); }
+.stat-devices span:nth-child(3) { background: var(--stat-series-3); }
+
+.stat-chart { width: 100%; height: auto; }
+.stat-chart .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.stat-chart .line-views { stroke: var(--stat-series-1); }
+.stat-chart .line-visitors { stroke: var(--stat-series-2); }
+.stat-chart .grid { stroke: var(--stat-grid); stroke-width: 1; }
+.stat-chart .dot { r: 3; fill: var(--ground); stroke-width: 2; }
+.stat-tooltip { position: absolute; pointer-events: none; padding: .4rem .6rem; border-radius: .3rem; background: var(--text); color: var(--ground); font-size: .8rem; white-space: nowrap; transform: translate(-50%, -115%); opacity: 0; transition: opacity .1s; }
+.stat-tooltip.visible { opacity: 1; }
+.stat-chart-wrap { position: relative; }
+
+.stat-empty { color: var(--muted); font-style: italic; }
+.stat-privacy-note { font-size: .85rem; color: var(--muted); margin-top: 2rem; }
+
+/* No inline style="width:…%" - the site's CSP allows no style-src
+   'unsafe-inline' (see core's HomeLayout::backgroundCss() for the same
+   reasoning elsewhere). Width comes from one of these instead, picked in
+   Twig by rounding to the nearest 5%. Used on both a figure's own bar and
+   a device segment. */
+.stat-w-0 { width: 0%; }
+.stat-w-5 { width: 5%; }
+.stat-w-10 { width: 10%; }
+.stat-w-15 { width: 15%; }
+.stat-w-20 { width: 20%; }
+.stat-w-25 { width: 25%; }
+.stat-w-30 { width: 30%; }
+.stat-w-35 { width: 35%; }
+.stat-w-40 { width: 40%; }
+.stat-w-45 { width: 45%; }
+.stat-w-50 { width: 50%; }
+.stat-w-55 { width: 55%; }
+.stat-w-60 { width: 60%; }
+.stat-w-65 { width: 65%; }
+.stat-w-70 { width: 70%; }
+.stat-w-75 { width: 75%; }
+.stat-w-80 { width: 80%; }
+.stat-w-85 { width: 85%; }
+.stat-w-90 { width: 90%; }
+.stat-w-95 { width: 95%; }
+.stat-w-100 { width: 100%; }

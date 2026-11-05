@@ -1,0 +1,12 @@
+{# Served by StatController::script() as application/javascript, not a
+   static asset - the install may sit in a subdirectory, so the endpoint
+   URL has to come from url(), the same as anywhere else in the site. #}
+(function () {
+    var endpoint = {{ url('/stat/hit')|json_encode(constant('JSON_UNESCAPED_SLASHES'))|raw }};
+    var payload = JSON.stringify({path: location.pathname + location.search, referrer: document.referrer || null});
+    if (navigator.sendBeacon) {
+        navigator.sendBeacon(endpoint, new Blob([payload], {type: 'text/plain'}));
+    } else {
+        fetch(endpoint, {method: 'POST', body: payload, keepalive: true, headers: {'Content-Type': 'text/plain'}}).catch(function () {});
+    }
+})();

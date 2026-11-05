@@ -1,0 +1,37 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}{{ trans('stat.account.title') }} – {{ site_name }}{% endblock %}
+
+{% block content %}
+{% include 'account/_nav.twig' %}
+<link rel="stylesheet" href="{{ ext_asset('stat', 'stat.css') }}">
+<h1>{{ trans('stat.account.title') }}</h1>
+<p>{{ trans('stat.account.intro') }}</p>
+
+<nav class="stat-range stat-viz" aria-label="{{ trans('stat.account.title') }}">
+    {% for name in ['7', '30', '90'] %}
+        <a href="{{ url('/account/stats') }}?range={{ name }}" {{ range == name ? 'aria-current="page"' }}>{{ trans('stat.range.' ~ name) }}</a>
+    {% endfor %}
+</nav>
+
+<div class="stat-tiles stat-viz">
+    <div class="stat-tile"><span class="label">{{ trans('stat.metric.views') }}</span><span class="value">{{ total_views }}</span></div>
+</div>
+
+{% if top is empty %}
+    <p class="stat-empty">{{ trans('stat.empty') }}</p>
+{% else %}
+    <div class="stat-figure stat-viz">
+        {% set max = top[0].views %}
+        {% for row in top %}
+            <div class="stat-figure-row">
+                <span class="name">{{ row.title }}</span>
+                <span class="count">{{ row.views }}</span>
+                <span class="track"><span class="stat-w-{{ max > 0 ? ((row.views / max * 100 / 5)|round) * 5 : 0 }}"></span></span>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<p class="stat-privacy-note stat-viz">{{ trans('stat.privacy_note') }}</p>
+{% endblock %}

@@ -1,0 +1,84 @@
+ENDNUTZER-LIZENZVERTRAG (EULA) – Statistik
+
+Lizenzgeber: Alexander Prossliner, Grillengasse 12, 2230 Gänserndorf, alex@modulento.com
+("Lizenzgeber")
+
+Dieser Lizenzvertrag gilt für die Erweiterung "Statistik" für Modulento
+("Produkt") und wird durch den Erwerb eines Lizenzschlüssels über den
+Lizenzserver des Lizenzgebers geschlossen. Mit der Installation oder
+Nutzung des Produkts erklärt sich der Käufer ("Lizenznehmer") mit diesen
+Bedingungen einverstanden.
+
+1. Vertragsgegenstand
+1.1 Das Produkt besteht aus Quellcode (PHP, Twig-Templates, CSS je nach
+    Produktart), der in eine selbst gehostete Modulento-Installation
+    eingebunden wird.
+1.2 Modulento selbst (der Kern) ist separat unter der GNU General
+    Public License v3 oder später lizenziert und nicht Gegenstand
+    dieses Vertrags.
+
+2. Einräumung der Nutzungsrechte
+2.1 Der Lizenzgeber räumt dem Lizenznehmer ein einfaches, nicht
+    übertragbares, nicht unterlizenzierbares Nutzungsrecht am Produkt
+    ein, beschränkt auf eine (1) Installation/Domain je erworbenem
+    Lizenzschlüssel, sofern beim Kauf nichts anderes vereinbart wurde.
+2.2 Der Lizenznehmer darf das Produkt für den lizenzierten Einsatz
+    anpassen (z. B. Farben, Templates, Texte, Konfiguration), soweit dies
+    zur bestimmungsgemäßen Nutzung auf der lizenzierten Installation
+    dient.
+
+3. Beschränkungen
+Ohne vorherige schriftliche Zustimmung des Lizenzgebers darf der
+Lizenznehmer das Produkt, auch in angepasster oder abgeleiteter Form,
+nicht:
+a) an Dritte weitergeben, verkaufen, verleihen, vermieten oder
+   unterlizenzieren, auch nicht unentgeltlich;
+b) auf mehr Installationen/Domains einsetzen, als der erworbene
+   Lizenzschlüssel vorsieht;
+c) öffentlich zugänglich machen (z. B. in einem öffentlichen
+   Code-Repository) oder als Vorlage für ein eigenes, an Dritte
+   vertriebenes Produkt verwenden;
+d) Lizenzprüfungen oder den Bezug von Produkt-Updates über den
+   Lizenzserver umgehen oder manipulieren.
+
+4. Geistiges Eigentum
+Alle Rechte am Produkt, insbesondere Urheberrechte, verbleiben beim
+Lizenzgeber. Dieser Vertrag räumt ausschließlich die in Ziffer 2
+genannten Nutzungsrechte ein; weitere Rechte werden nicht übertragen.
+
+5. Updates und Lizenzlaufzeit
+5.1 Der erworbene Lizenzschlüssel berechtigt für den beim Kauf
+    angegebenen Zeitraum (in der Regel 12 Monate) zum Bezug von
+    Produkt-Updates über den Lizenzserver.
+5.2 Nach Ablauf dieses Zeitraums bleibt die zuletzt bezogene Version
+    des Produkts auf der lizenzierten Installation uneingeschränkt
+    nutzbar; ein Anspruch auf weitere Updates besteht ohne Verlängerung
+    nicht.
+
+6. Gewährleistung und Haftung
+6.1 Das Produkt wird "wie besehen" ("as is") bereitgestellt. Der
+    Lizenzgeber übernimmt keine Gewähr dafür, dass das Produkt
+    fehlerfrei läuft oder für einen bestimmten Zweck geeignet ist.
+6.2 Der Lizenzgeber haftet nicht für mittelbare Schäden, Folgeschäden
+    oder entgangenen Gewinn, soweit gesetzlich zulässig. Die Haftung
+    für Vorsatz und grobe Fahrlässigkeit sowie nach zwingenden
+    gesetzlichen Vorschriften bleibt unberührt.
+6.3 Gegenüber Verbrauchern im Sinne des österreichischen
+    Konsumentenschutzgesetzes gelten die gesetzlichen
+    Gewährleistungsrechte unverändert, soweit vorstehende
+    Bestimmungen davon zu deren Nachteil abweichen würden.
+
+7. Beendigung
+Der Lizenzgeber kann die Nutzungsrechte bei einem schwerwiegenden
+Verstoß gegen Ziffer 3 fristlos widerrufen. Bereits gezahlte Beträge
+werden in diesem Fall nicht erstattet.
+
+8. Anwendbares Recht und Gerichtsstand
+Es gilt österreichisches Recht unter Ausschluss des UN-Kaufrechts.
+Gerichtsstand ist, soweit gesetzlich zulässig, Gänserndorf.
+
+9. Schlussbestimmungen
+Sollte eine Bestimmung dieses Vertrags unwirksam sein, bleibt die
+Wirksamkeit der übrigen Bestimmungen unberührt. An die Stelle der
+unwirksamen Bestimmung tritt eine dem wirtschaftlichen Zweck möglichst
+nahekommende wirksame Regelung.

@@ -1,0 +1,10 @@
+{
+    "id": "stat",
+    "name": "Statistik",
+    "version": "0.1.0",
+    "requires": "0.78.0",
+    "api": 1,
+    "type": "addon",
+    "description": "DSGVO-konforme Besucherstatistik ohne Cookies und ohne Einwilligungsbanner: Seitenaufrufe, Top-Seiten/Angebote, Herkunft und Conversion, aufbereitet als Diagramme in der Administration und (je Anbieter) im eigenen Konto.",
+    "namespace": "Modulento\\Stat"
+}
